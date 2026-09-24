@@ -1,74 +1,156 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hey — Kollektion</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <nav class="nav">
-    <a href="index.html" class="logo">Hey</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Åbn menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Forside</a></li>
-      <li><a href="produktliste.html">Kollektion</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">SEASON</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Åbn menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="produktliste.html">Kollektion</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main class="kollektion">
-  <h1>Kollektion</h1>
+  <main class="kollektion">
+    <h1>Kollektion</h1>
 
-  <section id="foraar" class="saeson-sektion">
-    <h2>Forår</h2>
-    <div class="produkt-grid">
-      <article class="produkt-kort foraar"><a href="produkt.html"><div class="produkt-billede"></div><h3>Hørskjorte</h3><p>799 kr.</p></a></article>
-      <article class="produkt-kort foraar-lys"><a href="produkt.html"><div class="produkt-billede"></div><h3>Cardigan</h3><p>699 kr.</p></a></article>
-      <article class="produkt-kort foraar-mork"><a href="produkt.html"><div class="produkt-billede"></div><h3>Hørbukser</h3><p>899 kr.</p></a></article>
-    </div>
-  </section>
+    <section id="foraar" class="saeson-sektion">
+      <h2>Forår</h2>
+      <div class="produkt-grid">
+        <article class="produkt-kort foraar"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Hørskjorte</h3>
+            <p>799 kr.</p>
+          </a></article>
+        <article class="produkt-kort foraar-lys tilbud">
+          <a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Cardigan</h3>
+            <p class="gammel-pris">899 kr.</p>
+            <p class="tilbuds-pris">699 kr.</p>
+            <span class="tilbud-label">Tilbud</span>
+          </a>
+        </article>
+        <article class="produkt-kort foraar-mork"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Hørbukser</h3>
+            <p>899 kr.</p>
+          </a></article>
+      </div>
+    </section>
 
-  <section id="sommer" class="saeson-sektion">
-    <h2>Sommer</h2>
-    <div class="produkt-grid">
-      <article class="produkt-kort sommer"><a href="produkt.html"><div class="produkt-billede"></div><h3>Sommerkjole</h3><p>999 kr.</p></a></article>
-      <article class="produkt-kort sommer-lys"><a href="produkt.html"><div class="produkt-billede"></div><h3>Top</h3><p>499 kr.</p></a></article>
-      <article class="produkt-kort sommer-mork"><a href="produkt.html"><div class="produkt-billede"></div><h3>Shorts</h3><p>599 kr.</p></a></article>
-    </div>
-  </section>
+    <section id="sommer" class="saeson-sektion">
+      <h2>Sommer</h2>
+      <div class="produkt-grid">
+        <article class="produkt-kort sommer"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Sommerkjole</h3>
+            <p>999 kr.</p>
+          </a></article>
+        <article class="produkt-kort sommer-lys udsolgt">
+          <a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Top</h3>
+            <p>499 kr.</p>
+            <span class="udsolgt-label">Udsolgt</span>
+          </a>
+        </article>
+        <article class="produkt-kort sommer-mork"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Shorts</h3>
+            <p>599 kr.</p>
+          </a></article>
+      </div>
+    </section>
 
-  <section id="efteraar" class="saeson-sektion">
-    <h2>Efterår</h2>
-    <div class="produkt-grid">
-      <article class="produkt-kort efteraar"><a href="produkt.html"><div class="produkt-billede"></div><h3>Uldjakke</h3><p>1.299 kr.</p></a></article>
-      <article class="produkt-kort efteraar-lys"><a href="produkt.html"><div class="produkt-billede"></div><h3>Strik</h3><p>899 kr.</p></a></article>
-      <article class="produkt-kort efteraar-mork"><a href="produkt.html"><div class="produkt-billede"></div><h3>Bukser</h3><p>899 kr.</p></a></article>
-    </div>
-  </section>
+    <section id="efteraar" class="saeson-sektion">
+      <h2>Efterår</h2>
+      <div class="produkt-grid">
+        <article class="produkt-kort efteraar"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Uldjakke</h3>
+            <p>1.299 kr.</p>
+          </a></article>
+        <article class="produkt-kort efteraar-lys"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Strik</h3>
+            <p>899 kr.</p>
+          </a></article>
+        <article class="produkt-kort efteraar-mork"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Bukser</h3>
+            <p>899 kr.</p>
+          </a></article>
+      </div>
+    </section>
 
-  <section id="vinter" class="saeson-sektion">
-    <h2>Vinter</h2>
-    <div class="produkt-grid">
-      <article class="produkt-kort vinter"><a href="produkt.html"><div class="produkt-billede"></div><h3>Vinterfrakke</h3><p>1.599 kr.</p></a></article>
-      <article class="produkt-kort vinter-lys"><a href="produkt.html"><div class="produkt-billede"></div><h3>Uldstrik</h3><p>999 kr.</p></a></article>
-      <article class="produkt-kort vinter-mork"><a href="produkt.html"><div class="produkt-billede"></div><h3>Uldbukser</h3><p>999 kr.</p></a></article>
-    </div>
-  </section>
-</main>
+    <section id="vinter" class="saeson-sektion">
+      <h2>Vinter</h2>
+      <div class="produkt-grid">
+        <article class="produkt-kort vinter"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Vinterfrakke</h3>
+            <p>1.599 kr.</p>
+          </a></article>
+        <article class="produkt-kort vinter-lys"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Uldstrik</h3>
+            <p>999 kr.</p>
+          </a></article>
+        <article class="produkt-kort vinter-mork"><a href="produkt.html">
+            <div class="produkt-billede">
+              <img src="img/product.png" alt="Produkt">
+            </div>
+            <h3>Uldbukser</h3>
+            <p>999 kr.</p>
+          </a></article>
+      </div>
+    </section>
+  </main>
 
-<footer class="site-footer">
-  <a href="index.html" class="logo">Hey</a>
-  <p>© 2026 Hey</p>
-</footer>
+  <footer class="site-footer">
+    <a href="index.html" class="logo">SEASON</a>
+    <p>© 2026 SEASON</p>
+  </footer>
 
-<script>
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
-  navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
-</script>
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  </script>
 
 </body>
+
 </html>
