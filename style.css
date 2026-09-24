@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600&family=Jost:wght@400;500&display=swap");
+
+:root {
+  --creme: #F3EEE5;
+  --brun: #4B3A2F;
+  --hvid: #FFFDF9;
+  --foraar: #B8C7A8;
+  --foraar-lys: #DCE4D3;
+  --foraar-mork: #879A78;
+  --sommer: #D9BC88;
+  --sommer-lys: #EFE1C8;
+  --sommer-mork: #B9915B;
+  --efteraar: #A96848;
+  --efteraar-lys: #D2AC96;
+  --efteraar-mork: #72503E;
+  --vinter: #59655F;
+  --vinter-lys: #D0D6D1;
+  --vinter-mork: #37423E;
+  --serif: "Bodoni Moda", Georgia, serif;
+  --sans: "Jost", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--creme); color: var(--brun); font-family: var(--sans); }
+a { color: inherit; text-decoration: none; }
+
+.site-header {
+  background: var(--creme);
+  border-bottom: 1px solid rgba(75,58,47,.15);
+}
+
+.nav {
+  max-width: 1200px;
+  min-height: 72px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo { font: 600 2rem/1 var(--serif); }
+.nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+.nav-links a:hover { opacity: .6; }
+.nav-toggle { display: none; border: 0; background: none; font-size: 1.4rem; color: var(--brun); }
+
+.hero {
+  min-height: 55vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--foraar-lys), var(--creme), var(--sommer-lys));
+}
+
+.hero h1 { font: 600 clamp(5rem, 15vw, 10rem)/.8 var(--serif); margin: 0 0 25px; }
+.hero p { margin: 0; font-size: 1.1rem; }
+
+.sektion, .kollektion, .produkt-side { max-width: 1200px; margin: auto; padding: 80px 24px; }
+.sektion h2, .kollektion > h1 { font: 600 clamp(2.5rem, 6vw, 4.5rem)/1 var(--serif); margin: 0 0 40px; }
+
+.saeson-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.saeson-kort { min-height: 360px; padding: 24px; display: flex; align-items: flex-end; }
+.saeson-kort h3 { font: 600 2.4rem/1 var(--serif); margin: 0; }
+
+.foraar { background: var(--foraar); }
+.foraar-lys { background: var(--foraar-lys); }
+.foraar-mork { background: var(--foraar-mork); }
+.sommer { background: var(--sommer); }
+.sommer-lys { background: var(--sommer-lys); }
+.sommer-mork { background: var(--sommer-mork); }
+.efteraar { background: var(--efteraar); }
+.efteraar-lys { background: var(--efteraar-lys); }
+.efteraar-mork { background: var(--efteraar-mork); }
+.vinter { background: var(--vinter); }
+.vinter-lys { background: var(--vinter-lys); }
+.vinter-mork { background: var(--vinter-mork); }
+
+.saeson-sektion { margin-bottom: 80px; }
+.saeson-sektion h2 { font: 600 2.8rem/1 var(--serif); margin: 0 0 25px; }
+.produkt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.produkt-kort { background: var(--hvid); overflow: hidden; }
+.produkt-billede { height: 360px; }
+.produkt-billede.stor { height: 650px; }
+.produkt-kort h3, .produkt-kort p { margin-left: 20px; margin-right: 20px; }
+.produkt-kort h3 { font: 600 1.5rem var(--serif); margin-top: 20px; margin-bottom: 5px; }
+.produkt-kort p { margin-top: 0; margin-bottom: 20px; }
+
+.tilbage { display: inline-block; margin-bottom: 35px; }
+.detalje-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.produkt-detaljer { padding-top: 40px; }
+.produkt-detaljer p { margin: 0 0 10px; }
+.produkt-detaljer h1 { font: 600 clamp(3rem, 7vw, 6rem)/.9 var(--serif); margin: 0 0 20px; }
+.produkt-detaljer strong { font-size: 1.1rem; }
+.knap { display: block; margin-top: 30px; padding: 14px 20px; border: 1px solid var(--brun); background: var(--brun); color: var(--hvid); width: 100%; cursor: pointer; }
+
+.site-footer {
+  padding: 35px 24px;
+  border-top: 1px solid rgba(75,58,47,.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer p { margin: 0; }
+
+@media (max-width: 900px) {
+  .saeson-grid { grid-template-columns: repeat(2, 1fr); }
+  .produkt-grid { grid-template-columns: repeat(2, 1fr); }
+  .detalje-grid { grid-template-columns: 1fr; gap: 30px; }
+  .produkt-billede.stor { height: 500px; }
+}
+
+@media (max-width: 600px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 20px 24px; background: var(--creme); flex-direction: column; gap: 15px; border-bottom: 1px solid rgba(75,58,47,.15); }
+  .nav-links.open { display: flex; }
+  .saeson-grid, .produkt-grid { grid-template-columns: 1fr; }
+  .saeson-kort { min-height: 260px; }
+  .produkt-billede { height: 330px; }
+  .produkt-billede.stor { height: 420px; }
+  .site-footer { flex-direction: column; gap: 15px; align-items: flex-start; }
+}

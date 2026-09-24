@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Hey</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Åbn menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="produktliste.html">Kollektion</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hey</h1>
+      <p>Tøj til alle sæsoner.</p>
+    </section>
+
+    <section class="sektion" id="saesoner">
+      <h2>Sæsoner</h2>
+
+      <div class="saeson-grid">
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="index.html" class="logo">Hey</a>
+    <p>© 2026 Hey</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  </script>
+
+</body>
+
+</html>
