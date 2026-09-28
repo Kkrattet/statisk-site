@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hey — Hørskjorte</title>
   <link rel="stylesheet" href="style.css">
+  <script src="produkt.js" defer></script>
 </head>
 
 <body>
@@ -24,14 +25,8 @@
   <main class="produkt-side">
     <a href="produktliste.html" class="tilbage">← Kollektion</a>
     <h2>Produkt</h2>
-    <div class="detalje-grid">
-      <div class="produkt-billede stor foraar"></div>
-      <article class="produkt-detaljer">
-        <p>Forår</p>
-        <h1>Hørskjorte</h1>
-        <strong>799 kr.</strong>
-        <button class="knap">Vælg størrelse</button>
-      </article>
+    <div class="produktIndhold">
+      <!-- JS indsætter produktet her -->
     </div>
   </main>
 
@@ -45,6 +40,7 @@
     const navLinks = document.getElementById("navLinks");
     navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
   </script>
+
 
 </body>
 
