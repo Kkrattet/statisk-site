@@ -14,6 +14,8 @@ function loadData(url) {
 function showDetails(detail) {
   console.log("detail", detail);
 
+  document.title = `SEASON — ${detail.productdisplayname}`;
+
   produktIndhold.innerHTML = `
     <div class="detalje-grid">
       <img class="produkt-billede stor"
@@ -22,12 +24,18 @@ function showDetails(detail) {
       <article class="produkt-detaljer">
         <p>${detail.brandname} - ${detail.articletype}</p>
         <h1>${detail.productdisplayname}</h1>
-        <strong>${detail.discount ? getDiscountPrice(detail.price, detail.discount) : detail.price} kr.</strong>
+        ${
+          detail.discount
+            ? `<p class="gammel-pris">${detail.price} kr.</p>
+               <strong>${getDiscountPrice(detail.price, detail.discount)} kr.</strong>`
+            : `<strong>${detail.price} kr.</strong>`
+        }
+        ${detail.soldout ? `<p><span class="udsolgt-label">Udsolgt</span></p>` : ""}
         <button class="knap">Vælg størrelse</button>
       </article>
     </div>`;
 
-  // Tilbage-linket går til produktets sæson
+  // Tilbage linket til produktets sæson:
   document.querySelector(".tilbage").href = `produktliste.html?season=${detail.season}`;
 }
 

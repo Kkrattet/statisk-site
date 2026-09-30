@@ -114,6 +114,11 @@ a {
   letter-spacing: 0.04em;
 }
 
+.hero .laes-mere {
+  justify-self: center;
+  margin-top: 30px;
+}
+
 /* GENERELLE SEKTIONER */
 
 .sektion,
@@ -128,7 +133,7 @@ a {
 .kollektion > h1,
 .produkt-side > h2 {
   font: 600 clamp(2.5rem, 6vw, 4.5rem)/1 var(--serif);
-  margin: 0 0 100px;
+  margin: 0 0 40px;
 }
 
 /* SÆSONER */
@@ -160,7 +165,7 @@ a {
 }
 
 .saeson-kort:hover img {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 .saeson-tekst {
   position: absolute;
@@ -169,7 +174,7 @@ a {
   bottom: 0;
   padding: 24px;
   color: var(--hvid);
-  background: linear-gradient(to right, rgba(154, 152, 152, 0.55), transparent);
+  background: linear-gradient(to top, rgba(40, 30, 25, 0.6), transparent);
 }
 
 .saeson-tekst h3 {
@@ -180,66 +185,33 @@ a {
 .saeson-tekst p {
   margin: 0;
 }
-/* SÆSONFARVER TIL PRODUKTER */
+/* SÆSONFARVER PÅ PRODUKTLISTEN */
 
-.foraar {
-  background: var(--foraar);
+.Spring {
+  --accent: var(--foraar-mork);
+  --accent-lys: var(--foraar-lys);
 }
 
-.foraar-lys {
-  background: var(--foraar-lys);
+.Summer {
+  --accent: var(--sommer-mork);
+  --accent-lys: var(--sommer-lys);
 }
 
-.foraar-mork {
-  background: var(--foraar-mork);
+.Fall {
+  --accent: var(--efteraar);
+  --accent-lys: var(--efteraar-lys);
 }
 
-.sommer {
-  background: var(--sommer);
+.Winter {
+  --accent: var(--vinter);
+  --accent-lys: var(--vinter-lys);
 }
 
-.sommer-lys {
-  background: var(--sommer-lys);
-}
-
-.sommer-mork {
-  background: var(--sommer-mork);
-}
-
-.efteraar {
-  background: var(--efteraar);
-}
-
-.efteraar-lys {
-  background: var(--efteraar-lys);
-}
-
-.efteraar-mork {
-  background: var(--efteraar-mork);
-}
-
-.vinter {
-  background: var(--vinter);
-}
-
-.vinter-lys {
-  background: var(--vinter-lys);
-}
-
-.vinter-mork {
-  background: var(--vinter-mork);
+.kollektion > h1 {
+  color: var(--accent, var(--brun));
 }
 
 /* PRODUKTLISTE */
-
-.saeson-sektion {
-  margin-bottom: 80px;
-}
-
-.saeson-sektion h2 {
-  font: 600 2.8rem/1 var(--serif);
-  margin: 0 0 25px;
-}
 
 .produkt-grid {
   display: grid;
@@ -248,14 +220,22 @@ a {
 }
 
 .produkt-kort {
-  background: var(--hvid);
+  background: var(--accent-lys, var(--hvid));
   overflow: hidden;
   border-radius: 12px;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.produkt-kort:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(75, 58, 47, 0.12);
 }
 
 .produkt-billede {
   position: relative;
-  height: 360px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
 }
 
@@ -264,10 +244,18 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s;
+}
+
+.produkt-kort:hover .produkt-billede img {
+  transform: scale(1.05);
 }
 
 .produkt-billede.stor {
-  height: 650px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
 }
 
 .produkt-kort h3,
@@ -299,7 +287,7 @@ a {
 
 /* TILBUD */
 
-.produkt-kort .gammel-pris {
+.gammel-pris {
   text-decoration: line-through;
   opacity: 0.5;
   margin-bottom: 0;
@@ -415,10 +403,6 @@ a {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-
-  .produkt-billede.stor {
-    height: 500px;
-  }
 }
 
 /* MOBIL */
@@ -451,15 +435,7 @@ a {
   }
 
   .saeson-kort {
-    min-height: 260px;
-  }
-
-  .produkt-billede {
-    height: 330px;
-  }
-
-  .produkt-billede.stor {
-    height: 420px;
+    height: 260px;
   }
 
   .site-footer {

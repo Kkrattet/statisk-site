@@ -20,13 +20,13 @@ function showData(data) {
 
     myInnerHTML += `
 
-      <a href="produktliste.html">
+      <a class="saeson-kort" href="produktliste.html?season=${saeson.season}">
 
-        <article class="saeson-kort">
+        <img src="img/${saeson.season}.png" alt="${saeson.season}">
 
-          <img src="img/${saeson.season}.png" alt="${saeson.season}">
-
-        </article>
+        <div class="saeson-tekst">
+          <h3>${saeson.season}</h3>
+        </div>
 
       </a>
 

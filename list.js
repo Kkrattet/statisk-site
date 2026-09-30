@@ -3,7 +3,16 @@ const param = new URLSearchParams(window.location.search);
 const selectedSeason = param.get("season");
 console.log("selectedSeason", selectedSeason);
 
-const productUrl = `https://kea-alt-del.dk/t7/api/products?season=${selectedSeason}`;
+let productUrl = `https://kea-alt-del.dk/t7/api/products?season=${selectedSeason}`;
+
+// Hvis der ikke er valgt en sæson (fx fra "Kollektion" i menuen), vises alle produkter
+if (selectedSeason === null) {
+  productUrl = "https://kea-alt-del.dk/t7/api/products?limit=30";
+} else {
+  document.querySelector(".kollektion h1").textContent = selectedSeason;
+  document.body.classList.add(selectedSeason);
+}
+
 const listKollektion = document.querySelector(".produkt-grid");
 
 function getData(url) {
