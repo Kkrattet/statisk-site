@@ -31,7 +31,7 @@ function showDetails(detail) {
             : `<strong>${detail.price} kr.</strong>`
         }
         ${detail.soldout ? `<p><span class="udsolgt-label">Udsolgt</span></p>` : ""}
-        <button class="knap">Vælg størrelse</button>
+        <button class="knap">Køb</button>
       </article>
     </div>`;
 

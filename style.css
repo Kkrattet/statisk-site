@@ -444,3 +444,53 @@ a {
     align-items: flex-start;
   }
 }
+
+/* SÆSON-KNAPPER PÅ PRODUKTLISTEN */
+
+.filter_season_buttons_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: -20px 0 40px;
+}
+
+/* Hver knap får sin egen sæsons farve */
+[data-season="Spring"] {
+  --accent: var(--foraar-mork);
+  --accent-lys: var(--foraar-lys);
+}
+[data-season="Summer"] {
+  --accent: var(--sommer-mork);
+  --accent-lys: var(--sommer-lys);
+}
+[data-season="Fall"] {
+  --accent: var(--efteraar);
+  --accent-lys: var(--efteraar-lys);
+}
+[data-season="Winter"] {
+  --accent: var(--vinter);
+  --accent-lys: var(--vinter-lys);
+}
+
+.list_button {
+  padding: 10px 24px;
+  border: 1px solid var(--accent, var(--brun));
+  border-radius: 999px;
+  background: var(--accent-lys, var(--hvid));
+  color: var(--brun);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.list_button:hover {
+  background: var(--accent, var(--brun));
+  color: var(--hvid);
+}
+
+/* Knappen for den sæson man står på skjules */
+.list_button.skjult {
+  display: none;
+}
